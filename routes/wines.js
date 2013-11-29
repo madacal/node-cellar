@@ -6,7 +6,7 @@ var Server = mongo.Server,
 
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/test'
 
-var server = new Server(mongoUri, { auto_reconnect: true });
+var server = new mongo.Server(mongoUri, { auto_reconnect: true });
 
 db = new Db('winedatabase', server, { safe: true });
 
